@@ -4,7 +4,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const ROOT = path.resolve(__dirname, '..');
+const ROOT = path.resolve(__dirname, '..', '..');
 
 const BOOT_TIMEOUT_MS = 8000;
 const REQUEST_TIMEOUT_MS = 3000;
@@ -12,7 +12,7 @@ const REQUEST_TIMEOUT_MS = 3000;
 function httpGet(url, timeoutMs) {
     return new Promise((resolve, reject) => {
         const req = http.get(url, { timeout: timeoutMs }, (res) => {
-            res.resume(); // drain, don't need the body
+            res.resume(); 
             resolve(res.statusCode);
         });
         req.on('timeout', () => req.destroy(new Error('request timed out')));
@@ -30,7 +30,8 @@ async function main() {
     const child = spawn('npm', ['start'], {
         cwd: ROOT,
         stdio: 'inherit',
-        shell: process.platform === 'win32', // npm needs shell:true on Windows
+        shell: process.platform === 'win32', 
+        detached: process.platform !== 'win32',
     });
 
     let exited = false;
@@ -41,7 +42,6 @@ async function main() {
         }
     });
 
-    // Give the gateway + backends time to boot before probing.
     await wait(BOOT_TIMEOUT_MS);
 
     if (exited) {
@@ -66,11 +66,14 @@ async function main() {
 }
 
 function killTree(child) {
-    // On Windows, child.kill() alone often leaves grandchild node processes
-    // (the spawned backends) orphaned. taskkill /T kills the whole tree.
     if (process.platform === 'win32') {
         spawn('taskkill', ['/pid', child.pid, '/T', '/F']);
-    } else {
+        return;
+    }
+
+    try {
+        process.kill(-child.pid, 'SIGTERM');
+    } catch {
         child.kill('SIGTERM');
     }
 }
