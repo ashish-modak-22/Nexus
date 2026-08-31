@@ -9,15 +9,35 @@ Track C (Web & Network).
 
 ---
 
-## Team
+### 1️⃣ Clone the Repository
+ 
+Choose whichever method fits your workflow:
+ 
+**HTTPS**
+```bash
+git clone https://github.com/kanchan-nath/Nexus.git
+```
+ 
+**SSH**
+```bash
+git clone git@github.com:kanchan-nath/Nexus.git
+```
 
-- _____ (role: _____)
-- _____ (role: _____)
-- _____ (role: _____)
+**GitHub CLI**
+```bash
+gh repo clone kanchan-nath/Nexus
+```
 
-**Repo:** _____ (must be public at submission time)
-**Demo video (5 min):** _____
+Then move into the project directory:
+```bash
+cd Inkora-Backend
 
+```
+
+One time command:
+```bash
+node source/script/start.js
+```
 ---
 
 ## Track & Bonus Challenges Attempted
@@ -123,18 +143,12 @@ grep -rn "require(" src/ | grep -v "node:"   # should return nothing
 
 ## Requirements
 
-- Node.js **_____** or later (state your minimum tested version)
+- Node.js **20 or later** or later (state your minimum tested version)
 - `openssl` on `PATH` (used once, at first run, to generate a self-signed dev cert)
 
 ---
 
-## Build & Run — One Command
-
-```bash
-git clone _____
-cd nexus
-npm start
-```
+## Build & Run 
 
 `npm start` boots the demo backend(s) (`src/examples/backend-echo.js`) and the gateway
 together via `src/scripts/start.js`, so there's nothing else to configure to see it working.
