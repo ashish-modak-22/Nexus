@@ -30,13 +30,19 @@ gh repo clone kanchan-nath/Nexus
 
 Then move into the project directory:
 ```bash
-cd Inkora-Backend
+cd Nexus
 
 ```
 
 One time command:
 ```bash
 node source/script/start.js
+```
+
+To verify:
+```bash
+1. curl http://localhost:8080
+2. curl -k https://localhost:8443
 ```
 ---
 
@@ -46,10 +52,10 @@ node source/script/start.js
 
 | Bonus | Attempted? | Notes |
 |---|---|---|
-| Single File (+5) | _____ | |
-| Reproducible Build (+5) | _____ | build twice, publish both hashes |
-| Package Killer (+3) | _____ | see `STDLIB.md` → Package Killer section |
-| STDLIB Log (+3) | Yes | 14 substitutions documented, see `STDLIB.md` |
+| Single File (+5) | No | Multi-module project by design — a single-file reverse proxy with this feature set wasn't the goal. |
+| Reproducible Build (+5) | No | `build.sh` exists but is currently empty; there's no bundling step since it's plain Node source, so this would need to be a source-tree hash script rather than a binary build. Not implemented yet. |
+| Package Killer (+3) | Yes | `security/ratelimiter.js` — see `STDLIB.md` → Package Killer section for the write-up. |
+| STDLIB Log (+3) | Yes | 14 substitutions documented with actual function/API names used, see `STDLIB.md`. |
 
 ---
 
