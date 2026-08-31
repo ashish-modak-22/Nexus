@@ -36,7 +36,7 @@ cd Nexus
 
 One time command:
 ```bash
-node src/script/start.js
+node src/scripts/start.js
 ```
 
 To verify:
