@@ -52,8 +52,6 @@ To verify:
 
 | Bonus | Attempted? | Notes |
 |---|---|---|
-| Single File (+5) | No | Multi-module project by design — a single-file reverse proxy with this feature set wasn't the goal. |
-| Reproducible Build (+5) | No | `build.sh` exists but is currently empty; there's no bundling step since it's plain Node source, so this would need to be a source-tree hash script rather than a binary build. Not implemented yet. |
 | Package Killer (+3) | Yes | `security/ratelimiter.js` — see `STDLIB.md` → Package Killer section for the write-up. |
 | STDLIB Log (+3) | Yes | 14 substitutions documented with actual function/API names used, see `STDLIB.md`. |
 
