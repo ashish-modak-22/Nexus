@@ -48,7 +48,7 @@ To verify:
 
 # 📸 Screenshots
 
-| <img src="screenShots/1.jpeg" width="200"/> | <img src="screenShots/2.jpeg" width="200"/> | <img src="screenShots/3.jpeg" width="200"/> | <img src="screenShots/4.jpeg" width="200"/> | <img src="screenShots/5.jpeg" width="200"/> | <img src="screenShots/6.jpeg" width="200"/> | <img src="screenShots/7.jpeg" width="200"/> | <img src="screenShots/8.jpeg" width="200"/> | <img src="screenShots/9.jpeg" width="200"/> | <img src="screenShots/10.jpeg" width="200"/> |
+| <img src="screenshots/1.jpeg" width="200"/> | <img src="screenshots/2.jpeg" width="200"/> | <img src="screenshots/3.jpeg" width="200"/> | <img src="screenshots/4.jpeg" width="200"/> | <img src="screenshots/5.jpeg" width="200"/> | <img src="screenshots/6.jpeg" width="200"/> | <img src="screenshots/7.jpeg" width="200"/> | <img src="screenshots/8.jpeg" width="200"/> | <img src="screenshots/9.jpeg" width="200"/> | <img src="screenshots/10.jpeg" width="200"/> |
 
 ---
 
