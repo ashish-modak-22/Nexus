@@ -46,6 +46,12 @@ To verify:
 ```
 ---
 
+# 📸 Screenshots
+
+| <img src="screenShots/1.jpeg" width="200"/> | <img src="screenShots/2.jpeg" width="200"/> | <img src="screenShots/3.jpeg" width="200"/> | <img src="screenShots/4.jpeg" width="200"/> | <img src="screenShots/5.jpeg" width="200"/> | <img src="screenShots/6.jpeg" width="200"/> | <img src="screenShots/7.jpeg" width="200"/> | <img src="screenShots/8.jpeg" width="200"/> | <img src="screenShots/9.jpeg" width="200"/> | <img src="screenShots/10.jpeg" width="200"/> |
+
+---
+
 ## Track & Bonus Challenges Attempted
 
 **Track:** C — Web & Network
