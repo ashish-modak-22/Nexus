@@ -57,6 +57,4 @@ These were named as Tier 2 stretch goals and are **not** Tier 3 scope-outs — w
 - Pipeline phase order pulled into config as a named ordered list (`core/pipeline.js`) — order is still a hardcoded array.
 - Per-route rate-limit override actually reaching `ratelimiter.js` from a matched route (`core/pipeline.js` → `security/ratelimiter.js`) — the module supports it, the wiring doesn't call it yet.
 - `npm start` as an actual `package.json` script — currently missing, even though `src/scripts/ci-smoke-test.js` assumes `npm start` works. Use `node src/scripts/start.js` until this is added.
-- Reproducible build script (`build.sh`) — currently empty.
 
-**Anything else built that's not on either list?** Add here: _____
